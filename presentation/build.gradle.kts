@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("kotlin-android")
 }
 
@@ -7,13 +7,11 @@ android {
     compileSdk = BuildConfig.compileSdkVersion
 
     defaultConfig {
-        applicationId = "com.kotlinbyte.msc"
         minSdk = BuildConfig.minSdkVersion
         targetSdk = BuildConfig.targetSdkVersion
-        versionCode = BuildConfig.versionCode
-        versionName = BuildConfig.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFile("consumer-rules.pro")
     }
 
     buildTypes {
@@ -38,12 +36,16 @@ dependencies {
 
     implementation(project(Dependencies.Modules.core))
 
-    implementation(Dependencies.AndroidX.coreKtx)
-    implementation(Dependencies.AndroidX.appcompat)
     implementation(Dependencies.Google.material)
 
-    testImplementation(Dependencies.Test.jUnit)
+    implementation(Dependencies.KotlinLibs.result)
+    implementation(Dependencies.KotlinLibs.coroutinesAndroid)
 
-    androidTestImplementation(Dependencies.AndroidTest.jUnit)
-    androidTestImplementation(Dependencies.AndroidTest.espresso)
+    implementation(Dependencies.AndroidX.lifecycleRuntime)
+    implementation(Dependencies.AndroidX.viewModel)
+
+    testImplementation(Dependencies.Test.jUnit)
+    testImplementation(Dependencies.Test.mockk)
+    testImplementation(Dependencies.Test.coroutine)
+
 }

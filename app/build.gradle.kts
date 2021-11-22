@@ -37,6 +37,7 @@ android {
 dependencies {
 
     implementation(project(Dependencies.Modules.core))
+    implementation(project(Dependencies.Modules.presentation))
 
 
     implementation(Dependencies.AndroidX.coreKtx)
