@@ -1,6 +1,8 @@
 package com.kotlinbyte.domain.repository.usercredentials
 
-interface UserCredentialsRepository {
-    suspend fun read(): String
-    suspend fun write(token: String)
+import com.kotlinbyte.domain.repository.BaseRepository
+
+abstract class UserCredentialsRepository: BaseRepository() {
+    abstract suspend fun read(): String
+    abstract suspend fun write(token: String)
 }
