@@ -34,7 +34,6 @@ android {
 
 dependencies {
 
-    implementation(project(Dependencies.Modules.core))
 
     implementation(Dependencies.Google.material)
 
