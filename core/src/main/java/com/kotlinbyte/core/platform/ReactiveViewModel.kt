@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import com.github.kittinunf.result.Result
-import com.kotlinbyte.core.exception.Failure
+import com.kotlinbyte.domain.exception.Failure
 import com.kotlinbyte.core.utils.UiState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

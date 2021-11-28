@@ -1,4 +1,4 @@
-package com.kotlinbyte.core.exception
+package com.kotlinbyte.domain.exception
 
 sealed class Failure : Throwable() {
     object NetworkConnection : Failure()

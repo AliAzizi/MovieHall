@@ -1,9 +1,9 @@
-package com.kotlinbyte.core.interactor
+package com.kotlinbyte.domain.usecase
 
-import com.kotlinbyte.core.exception.Failure
+import com.kotlinbyte.domain.exception.Failure
+import kotlin.coroutines.CoroutineContext
 import com.github.kittinunf.result.Result
 import kotlinx.coroutines.*
-import kotlin.coroutines.CoroutineContext
 
 abstract class UseCase<out Type, in Params>(private val context: CoroutineContext) where Type : Any {
 
