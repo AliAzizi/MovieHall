@@ -13,7 +13,7 @@ import com.github.kittinunf.result.Result
 
 typealias RememberableCall = () -> Unit
 
-abstract class ReactiveViewModel<D : Any>() : ViewModel() {
+abstract class ReactiveViewModel<D : Any> : ViewModel() {
 
     private val _uiState = MutableStateFlow<UiState<D>>(UiState.Initial)
 
