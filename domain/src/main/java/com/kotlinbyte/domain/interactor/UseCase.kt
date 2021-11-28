@@ -1,4 +1,4 @@
-package com.kotlinbyte.domain.usecase
+package com.kotlinbyte.domain.interactor
 
 import com.kotlinbyte.domain.exception.Failure
 import kotlin.coroutines.CoroutineContext

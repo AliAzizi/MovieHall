@@ -21,6 +21,7 @@ object Dependencies {
         val hilt by lazy { "com.google.dagger:hilt-android:2.38.1" }
     }
 
+
     object Test {
         val jUnit by lazy { "junit:junit:4.+" }
         val mockk by lazy { "io.mockk:mockk:1.12.0" }

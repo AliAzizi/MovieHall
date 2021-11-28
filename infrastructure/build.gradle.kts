@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -33,6 +35,9 @@ android {
 }
 
 dependencies {
+
+    implementation(Dependencies.Google.hilt)
+    kapt(Dependencies.Kapt.hilt)
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
