@@ -10,6 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import com.github.kittinunf.result.Result
+import kotlinx.coroutines.Job
 
 typealias RememberableCall = () -> Unit
 
@@ -23,14 +24,13 @@ abstract class ReactiveViewModel<D : Any> : ViewModel() {
 
     protected fun asyncCallOnViewModelScope(
         result: suspend () -> Result<D, Failure>
-    ) {
-        viewModelScope.launch(Dispatchers.Main) {
-            val deferred = async(Dispatchers.IO) {
-                result()
-            }
-            handleResult(deferred.await())
+    ): Job = viewModelScope.launch(Dispatchers.Main) {
+        val deferred = async(Dispatchers.IO) {
+            result()
         }
+        handleResult(deferred.await())
     }
+
 
     protected fun handleResult(result: Result<D, Failure>) {
         onLoading()

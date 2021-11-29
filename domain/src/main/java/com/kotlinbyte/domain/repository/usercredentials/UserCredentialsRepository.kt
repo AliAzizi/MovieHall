@@ -8,4 +8,6 @@ import com.kotlinbyte.domain.vobject.AuthResult
 abstract class UserCredentialsRepository : BaseRepository() {
     abstract suspend fun read(): Result<AuthResult, Failure>
     abstract suspend fun write(token: String): Result<Nothing, Failure>
+    abstract suspend fun isAuthenticated(): Result<Boolean, Failure>
+
 }

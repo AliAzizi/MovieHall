@@ -25,6 +25,11 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -40,6 +45,11 @@ dependencies {
     implementation(Dependencies.Google.hilt)
     kapt(Dependencies.Kapt.hilt)
 
+    implementation(project(Dependencies.Modules.domainAndroidOverlay))
+    implementation(project(Dependencies.Modules.domain))
+
+
+
     implementation(Dependencies.Google.material)
 
     implementation(Dependencies.KotlinLibs.result)
@@ -47,6 +57,7 @@ dependencies {
 
     implementation(Dependencies.AndroidX.lifecycleRuntime)
     implementation(Dependencies.AndroidX.viewModel)
+    implementation(Dependencies.AndroidX.fragmentKtx)
 
     testImplementation(Dependencies.Test.jUnit)
     testImplementation(Dependencies.Test.mockk)

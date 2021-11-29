@@ -3,6 +3,7 @@ object Dependencies {
     object Modules {
         val core by lazy { ":core" }
         val domain by lazy { ":domain" }
+        val domainAndroidOverlay by lazy { ":domain-android-overlay" }
         val presentation by lazy { ":presentation" }
         val infrastructure by lazy { ":infrastructure" }
     }
@@ -14,6 +15,7 @@ object Dependencies {
         val lifecycleRuntime by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0" }
         val navigationFragment by lazy { "androidx.navigation:navigation-fragment-ktx:2.3.5" }
         val viewModel by lazy { "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0" }
+        val fragmentKtx by lazy { "androidx.fragment:fragment-ktx:1.4.0" }
     }
 
     object Google {
