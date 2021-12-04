@@ -36,8 +36,11 @@ android {
 
 dependencies {
 
+    implementation(project(Dependencies.Modules.domain))
     implementation(Dependencies.Google.hilt)
     kapt(Dependencies.Kapt.hilt)
+
+    implementation(Dependencies.KotlinLibs.result)
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.3.1")

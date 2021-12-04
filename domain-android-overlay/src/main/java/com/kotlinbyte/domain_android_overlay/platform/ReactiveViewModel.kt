@@ -6,11 +6,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import com.kotlinbyte.domain.exception.Failure
 import com.kotlinbyte.domain_android_overlay.utils.UiState
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 import com.github.kittinunf.result.Result
-import kotlinx.coroutines.Job
+import kotlinx.coroutines.*
 
 typealias RememberableCall = () -> Unit
 
@@ -20,15 +17,15 @@ abstract class ReactiveViewModel<D : Any> : ViewModel() {
 
     val uiState: StateFlow<UiState<D>> = _uiState
 
-    var lastCall: RememberableCall? = null
+    private var lastCall: RememberableCall? = null
 
-    protected fun asyncCallOnViewModelScope(
-        result: suspend () -> Result<D, Failure>
-    ): Job = viewModelScope.launch(Dispatchers.Main) {
-        val deferred = async(Dispatchers.IO) {
-            result()
+    protected fun asyncCallOnViewModelScope(result: suspend () -> Result<D, Failure>) {
+        viewModelScope.launch(Dispatchers.Main) {
+            val deferred = async(Dispatchers.IO) {
+                result()
+            }
+            handleResult(deferred.await())
         }
-        handleResult(deferred.await())
     }
 
 
@@ -62,4 +59,3 @@ abstract class ReactiveViewModel<D : Any> : ViewModel() {
     }
 
 }
-

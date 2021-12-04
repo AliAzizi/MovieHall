@@ -5,7 +5,7 @@ import kotlin.coroutines.CoroutineContext
 import com.github.kittinunf.result.Result
 import kotlinx.coroutines.*
 
-abstract class UseCase<out Type, in Params>(private val context: CoroutineContext) where Type : Any {
+abstract class UseCase<out Type, in Params>(private val context: CoroutineContext = Dispatchers.IO) where Type : Any {
 
     abstract suspend fun run(params: Params): Result<Type, Failure>
 

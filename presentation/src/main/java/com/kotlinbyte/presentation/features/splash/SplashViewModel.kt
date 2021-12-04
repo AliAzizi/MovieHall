@@ -4,16 +4,20 @@ import androidx.lifecycle.viewModelScope
 import com.kotlinbyte.domain.entity.ServerInfo
 import com.kotlinbyte.domain.interactor.UseCase
 import com.kotlinbyte.domain_android_overlay.platform.ReactiveViewModel
+import com.kotlinbyte.domain_android_overlay.usecase.GetServerInfo
 import com.kotlinbyte.domain_android_overlay.usecase.GetUserAuthenticationStatus
 import com.kotlinbyte.domain_android_overlay.usecase.GetUserCredentials
 import kotlinx.coroutines.launch
 
-class SplashViewModel(private val getUserAuthenticationStatus: GetUserAuthenticationStatus) :
-    ReactiveViewModel<ServerInfo>() {
+class SplashViewModel(
+    private val getUserAuthenticationStatus: GetUserAuthenticationStatus,
+    private val getServerInfo: GetServerInfo
+) : ReactiveViewModel<ServerInfo>() {
 
-
-    fun getServerInfo() {
-
+    fun fetchInfo() {
+        asyncCallOnViewModelScope {
+            getServerInfo.run(UseCase.None())
+        }
     }
 
     fun isUserAuthenticated(status: (Boolean) -> Unit) {
@@ -24,5 +28,6 @@ class SplashViewModel(private val getUserAuthenticationStatus: GetUserAuthentica
             )
         }
     }
+
 
 }

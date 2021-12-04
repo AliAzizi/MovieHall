@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MovieHall.iml" filepath="$PROJECT_DIR$/.idea/modules/MovieHall.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MovieHall.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MovieHall.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MovieHall.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/MovieHall.buildSrc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/MovieHall.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/MovieHall.core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/MovieHall.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/MovieHall.domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain-android-overlay/MovieHall.domain-android-overlay.iml" filepath="$PROJECT_DIR$/.idea/modules/domain-android-overlay/MovieHall.domain-android-overlay.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/infrastructure/MovieHall.infrastructure.iml" filepath="$PROJECT_DIR$/.idea/modules/infrastructure/MovieHall.infrastructure.iml" />
