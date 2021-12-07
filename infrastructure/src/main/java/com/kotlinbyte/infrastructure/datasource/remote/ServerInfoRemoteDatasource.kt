@@ -8,7 +8,7 @@ abstract class ServerInfoRemoteDatasource {
     abstract suspend fun fetch() : ServerInfo
 }
 
-@ViewModelScoped
+
 class ServerInfoRemoteDatasourceImpl @Inject constructor() : ServerInfoRemoteDatasource() {
 
     override suspend fun fetch(): ServerInfo {

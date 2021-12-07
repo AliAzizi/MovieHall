@@ -6,6 +6,7 @@ import com.kotlinbyte.domain.utils.KeyConstants
 import com.kotlinbyte.domain.vobject.AuthResult
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlin.jvm.Throws
 
 interface UserCredentialsLocalDataSource {
     suspend fun writeToken(token: String)
@@ -13,14 +14,14 @@ interface UserCredentialsLocalDataSource {
     suspend fun isAuthenticated(): Boolean
 }
 
-@Singleton
 class SPUserCredentialsLocalDataSource @Inject constructor(private val sharedPreferences: SharedPreferences) :
     UserCredentialsLocalDataSource {
 
-    var authResult: AuthResult? = null
+    private var authResult: AuthResult? = null
 
     override suspend fun writeToken(token: String) = with(sharedPreferences.edit()) {
         putString(KeyConstants.TOKEN, token)
+        authResult = AuthResult(token)
         apply()
     }
 
