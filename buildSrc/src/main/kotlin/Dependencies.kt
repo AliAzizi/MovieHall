@@ -1,7 +1,6 @@
 object Dependencies {
 
     object Modules {
-        val core by lazy { ":core" }
         val domain by lazy { ":domain" }
         val domainAndroidOverlay by lazy { ":domain-android-overlay" }
         val presentation by lazy { ":presentation" }

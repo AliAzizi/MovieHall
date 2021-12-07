@@ -5,6 +5,7 @@
       <module name="MovieHall.app" target="15" />
       <module name="MovieHall.buildSrc" target="15" />
       <module name="MovieHall.core" target="15" />
+      <module name="MovieHall.di" target="15" />
       <module name="MovieHall.domain-android-overlay" target="15" />
       <module name="MovieHall.infrastructure" target="15" />
       <module name="MovieHall.presentation" target="15" />
