@@ -28,7 +28,6 @@ abstract class ReactiveViewModel<D : Any> : ViewModel() {
         }
     }
 
-
     protected fun handleResult(result: Result<D, Failure>) {
         onLoading()
         result.fold(

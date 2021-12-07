@@ -12,5 +12,4 @@ sealed class Failure : Throwable() {
     object GoogleApi : Failure()
 
     abstract class CustomFailure : Failure()
-
 }
