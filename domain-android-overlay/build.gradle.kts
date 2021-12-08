@@ -44,7 +44,7 @@ dependencies {
     implementation(Dependencies.Google.hilt)
     kapt(Dependencies.Kapt.hilt)
 
-
+    implementation(Dependencies.AndroidLibs.retrofit)
     implementation(project(Dependencies.Modules.domain))
     implementation(Dependencies.Google.material)
 
