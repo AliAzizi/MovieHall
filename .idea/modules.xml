@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MovieHall.iml" filepath="$PROJECT_DIR$/.idea/modules/MovieHall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MovieHall.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MovieHall.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MovieHall.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/MovieHall.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/di/MovieHall.di.iml" filepath="$PROJECT_DIR$/.idea/modules/di/MovieHall.di.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/MovieHall.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/MovieHall.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain-android-overlay/MovieHall.domain-android-overlay.iml" filepath="$PROJECT_DIR$/.idea/modules/domain-android-overlay/MovieHall.domain-android-overlay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/infrastructure/MovieHall.infrastructure.iml" filepath="$PROJECT_DIR$/.idea/modules/infrastructure/MovieHall.infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presentation/MovieHall.presentation.iml" filepath="$PROJECT_DIR$/.idea/modules/presentation/MovieHall.presentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-float/MovieHall.service-float.iml" filepath="$PROJECT_DIR$/.idea/modules/service-float/MovieHall.service-float.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-multimedia/MovieHall.service-multimedia.iml" filepath="$PROJECT_DIR$/.idea/modules/service-multimedia/MovieHall.service-multimedia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/upnp/MovieHall.upnp.iml" filepath="$PROJECT_DIR$/.idea/modules/upnp/MovieHall.upnp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/widgets/MovieHall.widgets.iml" filepath="$PROJECT_DIR$/.idea/modules/widgets/MovieHall.widgets.iml" />
+    </modules>
+  </component>
+</project>

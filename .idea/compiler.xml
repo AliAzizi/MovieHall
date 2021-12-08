@@ -8,6 +8,10 @@
       <module name="MovieHall.domain-android-overlay" target="15" />
       <module name="MovieHall.infrastructure" target="15" />
       <module name="MovieHall.presentation" target="15" />
+      <module name="MovieHall.service-float" target="15" />
+      <module name="MovieHall.service-multimedia" target="15" />
+      <module name="MovieHall.upnp" target="15" />
+      <module name="MovieHall.widgets" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>
