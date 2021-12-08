@@ -10,9 +10,11 @@ import com.kotlinbyte.domain_android_overlay.platform.BaseFragment
 import com.kotlinbyte.domain_android_overlay.platform.BaseViewBindingFragment
 import com.kotlinbyte.domain_android_overlay.utils.UiState
 import com.kotlinbyte.presentation.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SplashFragment :
     BaseViewBindingFragment<FragmentSplashBinding>(FragmentSplashBinding::inflate) {
 

@@ -7,9 +7,12 @@ import com.kotlinbyte.domain_android_overlay.platform.ReactiveViewModel
 import com.kotlinbyte.domain_android_overlay.usecase.GetServerInfo
 import com.kotlinbyte.domain_android_overlay.usecase.GetUserAuthenticationStatus
 import com.kotlinbyte.domain_android_overlay.usecase.GetUserCredentials
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SplashViewModel(
+@HiltViewModel
+class SplashViewModel @Inject constructor(
     private val getUserAuthenticationStatus: GetUserAuthenticationStatus,
     private val getServerInfo: GetServerInfo
 ) : ReactiveViewModel<ServerInfo>() {
