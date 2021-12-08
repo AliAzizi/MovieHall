@@ -37,10 +37,12 @@ object Dependencies {
         val jUnit by lazy { "junit:junit:4.+" }
         val mockk by lazy { "io.mockk:mockk:1.12.0" }
         val coroutine by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1" }
+        val robolectric by lazy { "org.robolectric:robolectric:4.6" }
     }
 
     object AndroidTest {
         val jUnit by lazy { "androidx.test.ext:junit:1.1.3" }
+        val jUnitKtx by lazy { "androidx.test.ext:junit-ktx:1.1.3" }
         val espresso by lazy { "androidx.test.espresso:espresso-core:3.4.0" }
     }
 

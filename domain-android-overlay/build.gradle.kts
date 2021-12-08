@@ -40,7 +40,6 @@ android {
 }
 
 dependencies {
-
     implementation(Dependencies.Google.hilt)
     kapt(Dependencies.Kapt.hilt)
 
@@ -57,4 +56,10 @@ dependencies {
     testImplementation(Dependencies.Test.jUnit)
     testImplementation(Dependencies.Test.mockk)
     testImplementation(Dependencies.Test.coroutine)
+    testImplementation(Dependencies.Test.robolectric)
+    testImplementation(Dependencies.AndroidTest.jUnitKtx)
+
+    androidTestImplementation(Dependencies.AndroidTest.jUnit)
+    androidTestImplementation(Dependencies.AndroidTest.jUnitKtx)
+    androidTestImplementation(Dependencies.AndroidTest.espresso)
 }
