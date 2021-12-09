@@ -1,4 +1,4 @@
-package com.kotlinbyte.domain_android_overlay.networking.dto
+package com.kotlinbyte.infrastructure.datasource.remote.networking.dto
 
 import com.kotlinbyte.domain.entity.ServerInfo
 

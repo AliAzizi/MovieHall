@@ -41,6 +41,7 @@ dependencies {
     kapt(Dependencies.Kapt.hilt)
     implementation(Dependencies.KotlinLibs.coroutinesAndroid)
 
+    implementation(Dependencies.AndroidLibs.retrofit)
     implementation(Dependencies.KotlinLibs.result)
 
     testImplementation(Dependencies.Test.mockk)
