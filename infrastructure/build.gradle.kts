@@ -36,9 +36,17 @@ android {
 
 dependencies {
 
+
     implementation(project(Dependencies.Modules.domain))
+    implementation(project(Dependencies.Modules.domainAndroidOverlay))
+
+
     implementation(Dependencies.Google.hilt)
     kapt(Dependencies.Kapt.hilt)
+
+    implementation(Dependencies.Google.gmsServiceAuth)
+
+
     implementation(Dependencies.KotlinLibs.coroutinesAndroid)
 
     implementation(Dependencies.AndroidLibs.retrofit)

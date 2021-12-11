@@ -1,12 +1,15 @@
 package com.kotlinbyte.domain_android_overlay.usecase
 
-import com.github.kittinunf.result.Result
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.kotlinbyte.domain.exception.Failure
 import com.kotlinbyte.domain.interactor.UseCase
+import com.kotlinbyte.domain.vobject.AuthResult
+import com.kotlinbyte.domain_android_overlay.repository.SignInRepositoryFramework
+import dagger.hilt.android.scopes.FragmentScoped
+import javax.inject.Inject
 
-class SignInViaGoogle : UseCase<Nothing, GoogleSignInAccount>() {
-    override suspend fun run(params: GoogleSignInAccount): Result<Nothing, Failure> {
-        TODO("Not yet implemented")
-    }
+@FragmentScoped
+class SignInViaGoogle @Inject constructor(private val repository: SignInRepositoryFramework) :
+    UseCase<AuthResult, GoogleSignInAccount>() {
+
+    override suspend fun run(params: GoogleSignInAccount) = repository.signIn(params)
 }

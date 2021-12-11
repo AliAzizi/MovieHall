@@ -7,6 +7,8 @@ sealed class Failure : Throwable() {
 
     object AuthenticationRequired : Failure()
 
+    object AuthenticationFailed : Failure()
+
     object Unexpected : Failure()
 
     object GoogleApi : Failure()
