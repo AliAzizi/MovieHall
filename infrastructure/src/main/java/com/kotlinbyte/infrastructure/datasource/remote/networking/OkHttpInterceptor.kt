@@ -17,5 +17,4 @@ class OkHttpInterceptor @Inject constructor(
         chain.authenticationAwareRequest(userCredentials)
     )
 
-
 }

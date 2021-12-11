@@ -7,6 +7,7 @@ import okhttp3.Route
 
 
 class OkHttpAuthenticator : Authenticator {
+
     override fun authenticate(route: Route?, response: Response): Request? {
         TODO("Not yet implemented")
     }
