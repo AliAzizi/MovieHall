@@ -6,9 +6,22 @@ import com.kotlinbyte.domain.repository.signup.SignUpRepository
 import com.kotlinbyte.domain.vobject.AuthResult
 import com.kotlinbyte.domain.vobject.Email
 import com.kotlinbyte.domain.vobject.Password
+import com.kotlinbyte.domain.vobject.Username
+import com.kotlinbyte.infrastructure.datasource.remote.SignUpRemoteDatasource
+import javax.inject.Inject
 
-class SignUpRepositoryImpl : SignUpRepository() {
-    override suspend fun signIn(email: Email, password: Password): Result<AuthResult, Failure> {
-        TODO("Not yet implemented")
+class SignUpRepositoryImpl @Inject constructor(
+    private val remoteDatasource: SignUpRemoteDatasource
+) : SignUpRepository() {
+
+    override suspend fun signUp(
+        username: Username,
+        email: Email,
+        password: Password
+    ) = try {
+        Result.success(remoteDatasource.signUp(username, email, password))
+    } catch (ex: Exception) {
+        Result.failure(Failure.Unexpected)
     }
+
 }
