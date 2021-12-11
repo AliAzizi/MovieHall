@@ -2,6 +2,7 @@ package com.kotlinbyte.infrastructure.repository
 
 import com.github.kittinunf.result.Result
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.tasks.Task
 import com.kotlinbyte.domain.exception.Failure
 import com.kotlinbyte.domain.vobject.AuthResult
 import com.kotlinbyte.domain.vobject.Email
@@ -23,8 +24,8 @@ class SignInRepositoryImpl @Inject constructor(private val remote: SignInRemoteD
     }
 
 
-    override suspend fun signIn(googleSignInAccount: GoogleSignInAccount) = try {
-        Result.success(remote.signIn(googleSignInAccount))
+    override suspend fun signIn(task: Task<GoogleSignInAccount>?) = try {
+        Result.success(remote.signIn(task))
     } catch (ex: Exception) {
         Result.failure(Failure.AuthenticationFailed)
     }
