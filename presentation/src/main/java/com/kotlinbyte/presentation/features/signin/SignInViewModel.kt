@@ -9,9 +9,10 @@ import com.kotlinbyte.domain_android_overlay.platform.ReactiveViewModel
 import com.kotlinbyte.domain_android_overlay.usecase.SignInViaEmail
 import com.kotlinbyte.domain_android_overlay.usecase.SignInViaGoogle
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 @HiltViewModel
-class SignInViewModel(
+class SignInViewModel @Inject constructor(
     private val signInViaGoogleUseCase: SignInViaGoogle,
     private val signInViaEmail: SignInViaEmail
 ) : ReactiveViewModel<AuthResult>() {
