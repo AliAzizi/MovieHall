@@ -9,6 +9,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 class SignInViewModel : ReactiveViewModel<Nothing>() {
 
     fun signInViaGoogle(task: Task<GoogleSignInAccount>?) {
+        task?.let {
 
+        }
     }
 }
