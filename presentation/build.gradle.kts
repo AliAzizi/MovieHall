@@ -45,6 +45,9 @@ dependencies {
     implementation(Dependencies.Google.hilt)
     kapt(Dependencies.Kapt.hilt)
 
+    implementation(Dependencies.Google.gmsServiceAuth)
+
+
     implementation(project(Dependencies.Modules.domainAndroidOverlay))
     implementation(project(Dependencies.Modules.domain))
 

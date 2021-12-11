@@ -18,11 +18,11 @@ object Dependencies {
     }
 
     object AndroidLibs {
-        val lottie by lazy {"com.airbnb.android:lottie:4.2.0"}
+        val lottie by lazy { "com.airbnb.android:lottie:4.2.0" }
 
-        val retrofit by lazy {"com.squareup.retrofit2:retrofit:2.9.0"}
+        val retrofit by lazy { "com.squareup.retrofit2:retrofit:2.9.0" }
 
-        val retrofitGsonConverter by lazy {"com.squareup.retrofit2:converter-gson:2.9.0"}
+        val retrofitGsonConverter by lazy { "com.squareup.retrofit2:converter-gson:2.9.0" }
 
         fun dependencies() = listOf(lottie, retrofit, retrofitGsonConverter)
     }
@@ -30,6 +30,7 @@ object Dependencies {
     object Google {
         val material by lazy { "com.google.android.material:material:1.4.0" }
         val hilt by lazy { "com.google.dagger:hilt-android:2.38.1" }
+        val gmsServiceAuth by lazy { "com.google.android.gms:play-services-auth:20.0.0" }
     }
 
 
