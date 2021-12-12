@@ -7,31 +7,31 @@ import com.kotlinbyte.domain.entity.Video
 import java.time.Year
 import java.util.*
 
-interface Title {
-    val id: String
-    val title: String
-    val originalTitle: String?
-    val fullTitle: String
-    val type: Type
-    val year: Year
-    val image: Image
-    val releaseDate: Date
-    val plot: Plot
-    val awards: String?
-    val directorList: List<Director>?
-    val writerList: List<Writer>?
-    val starList: List<Person>?
-    val actorList: List<Actor>?
-    val genreList: List<Genre>?
-    val companyList: List<Company>?
-    val countryList: List<Country>?
-    val languageList: List<Language>?
-    val ratings: List<Rating>?
-    val posters: List<Poster>?
-    val images: List<Image>?
-    val trailers: List<Video>?
-    val keywords: List<String>?
-    val similars: List<Title>
+abstract class Title {
+    abstract val id: String
+    abstract val title: String
+    abstract val originalTitle: String?
+    abstract val fullTitle: String
+    abstract val type: Type
+    abstract val year: Year
+    abstract val image: Image
+    abstract val releaseDate: Date
+    abstract val plot: Plot
+    abstract val awards: String?
+    abstract val directorList: List<Director>?
+    abstract val writerList: List<Writer>?
+    abstract val starList: List<Person>?
+    abstract val actorList: List<Actor>?
+    abstract val genreList: List<Genre>?
+    abstract val companyList: List<Company>?
+    abstract val countryList: List<Country>?
+    abstract val languageList: List<Language>?
+    abstract val ratings: List<Rating>?
+    abstract val posters: List<Poster>?
+    abstract val images: List<Image>?
+    abstract val trailers: List<Video>?
+    abstract val keywords: List<String>?
+    abstract val similars: List<Title>
 
     enum class Type {
         Movie,
