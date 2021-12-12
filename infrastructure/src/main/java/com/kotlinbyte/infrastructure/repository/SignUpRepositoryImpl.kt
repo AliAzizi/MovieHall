@@ -3,7 +3,6 @@ package com.kotlinbyte.infrastructure.repository
 import com.github.kittinunf.result.Result
 import com.kotlinbyte.domain.exception.Failure
 import com.kotlinbyte.domain.repository.signup.SignUpRepository
-import com.kotlinbyte.domain.vobject.AuthResult
 import com.kotlinbyte.domain.vobject.Email
 import com.kotlinbyte.domain.vobject.Password
 import com.kotlinbyte.domain.vobject.Username

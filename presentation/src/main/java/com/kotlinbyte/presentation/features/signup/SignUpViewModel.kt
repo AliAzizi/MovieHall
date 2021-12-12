@@ -1,6 +1,5 @@
 package com.kotlinbyte.presentation.features.signup
 
-import androidx.lifecycle.ViewModel
 import com.kotlinbyte.domain.vobject.AuthResult
 import com.kotlinbyte.domain.vobject.Email
 import com.kotlinbyte.domain.vobject.Password

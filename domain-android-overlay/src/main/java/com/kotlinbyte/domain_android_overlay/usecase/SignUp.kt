@@ -1,7 +1,5 @@
 package com.kotlinbyte.domain_android_overlay.usecase
 
-import com.github.kittinunf.result.Result
-import com.kotlinbyte.domain.exception.Failure
 import com.kotlinbyte.domain.interactor.UseCase
 import com.kotlinbyte.domain.repository.signup.SignUpRepository
 import com.kotlinbyte.domain.vobject.AuthResult

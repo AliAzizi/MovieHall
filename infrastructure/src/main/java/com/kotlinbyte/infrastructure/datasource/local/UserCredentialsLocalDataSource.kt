@@ -5,8 +5,6 @@ import com.kotlinbyte.domain.exception.AuthenticationRequiredException
 import com.kotlinbyte.domain.utils.KeyConstants
 import com.kotlinbyte.domain.vobject.AuthResult
 import javax.inject.Inject
-import javax.inject.Singleton
-import kotlin.jvm.Throws
 
 interface UserCredentialsLocalDataSource {
     suspend fun writeToken(token: String)

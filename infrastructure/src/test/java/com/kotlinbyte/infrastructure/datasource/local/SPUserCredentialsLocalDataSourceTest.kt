@@ -4,14 +4,10 @@ import android.content.SharedPreferences
 import com.kotlinbyte.domain.exception.AuthenticationRequiredException
 import com.kotlinbyte.domain.utils.KeyConstants
 import com.kotlinbyte.domain.vobject.AuthResult
-import io.mockk.MockKAnnotations
 import io.mockk.every
-import io.mockk.impl.annotations.MockK
 import io.mockk.mockk
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.junit.*
-import org.junit.rules.ExpectedException
 
 class SPUserCredentialsLocalDataSourceTest {
     private val sp: SharedPreferences = mockk()
