@@ -44,8 +44,6 @@ class ReactiveViewModelTest {
             rememberableCall { asyncCallOnViewModelScope { fakeUseCase.run(param) } }
 
         }
-
-
     }
 
     @Before
