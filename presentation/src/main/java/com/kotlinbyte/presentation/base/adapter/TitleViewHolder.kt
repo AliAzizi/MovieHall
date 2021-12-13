@@ -42,8 +42,3 @@ abstract class TitleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemVie
         }
     }
 }
-
-
-class DataBinder<T : TitleViewHolder> {
-
-}

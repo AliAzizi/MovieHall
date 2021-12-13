@@ -11,14 +11,11 @@ import java.lang.IllegalArgumentException
 import javax.inject.Inject
 import kotlin.properties.Delegates
 
-class TitleAdapter @Inject constructor() : RecyclerView.Adapter<TitleViewHolder>() {
+class TitleAdapter @Inject constructor() : TouchableAdapter<TitleViewHolder>() {
 
     internal val collection: List<Title> by Delegates.observable(emptyList()) { _, _, _ ->
         notifyDataSetChanged()
     }
-
-    val onClickListener: (Title) -> Unit = { _ -> }
-    val onLongClickListener: (Title) -> Unit = { _ -> }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         Title.Type.Movie.ordinal -> TitleViewHolder.Movie.from(parent).also(::touchAble)
