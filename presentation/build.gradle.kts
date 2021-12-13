@@ -61,6 +61,8 @@ dependencies {
     implementation(Dependencies.AndroidX.lifecycleRuntime)
     implementation(Dependencies.AndroidX.viewModel)
     implementation(Dependencies.AndroidX.fragmentKtx)
+    implementation(Dependencies.AndroidX.navigationFragment)
+    implementation(Dependencies.AndroidX.navigationUiKtx)
 
     testImplementation(Dependencies.Test.jUnit)
     testImplementation(Dependencies.Test.mockk)

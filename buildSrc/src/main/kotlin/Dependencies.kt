@@ -13,6 +13,7 @@ object Dependencies {
         val constraintLayout by lazy { "androidx.constraintlayout:constraintlayout:2.1.1" }
         val lifecycleRuntime by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0" }
         val navigationFragment by lazy { "androidx.navigation:navigation-fragment-ktx:2.3.5" }
+        val navigationUiKtx by lazy { "androidx.navigation:navigation-ui-ktx:2.3.5" }
         val viewModel by lazy { "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0" }
         val fragmentKtx by lazy { "androidx.fragment:fragment-ktx:1.4.0" }
     }
