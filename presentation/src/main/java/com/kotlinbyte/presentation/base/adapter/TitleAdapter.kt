@@ -8,9 +8,10 @@ import com.kotlinbyte.domain.entity.base.Title
 import com.kotlinbyte.domain_android_overlay.extension.setOnClickListener
 import com.kotlinbyte.domain_android_overlay.extension.setOnLongClickListener
 import java.lang.IllegalArgumentException
+import javax.inject.Inject
 import kotlin.properties.Delegates
 
-class TitleAdapter : RecyclerView.Adapter<TitleViewHolder>() {
+class TitleAdapter @Inject constructor() : RecyclerView.Adapter<TitleViewHolder>() {
 
     internal val collection: List<Title> by Delegates.observable(emptyList()) { _, _, _ ->
         notifyDataSetChanged()
