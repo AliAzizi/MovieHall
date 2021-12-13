@@ -5,6 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlinbyte.domain.entity.base.Title
+import com.kotlinbyte.domain_android_overlay.extension.setOnClickListener
+import com.kotlinbyte.domain_android_overlay.extension.setOnLongClickListener
 import java.lang.IllegalArgumentException
 import kotlin.properties.Delegates
 
@@ -25,12 +27,11 @@ class TitleAdapter : RecyclerView.Adapter<TitleViewHolder>() {
 
 
     private fun touchAble(holder: TitleViewHolder): TitleViewHolder {
-        holder.itemView.setOnClickListener {
-            onClickListener(collection[holder.adapterPosition])
+        holder.setOnClickListener {
+            onClickListener(collection[it])
         }
-        holder.itemView.setOnLongClickListener {
-            onLongClickListener(collection[holder.adapterPosition])
-            true
+        holder.setOnLongClickListener {
+            onLongClickListener(collection[it])
         }
         return holder
     }
