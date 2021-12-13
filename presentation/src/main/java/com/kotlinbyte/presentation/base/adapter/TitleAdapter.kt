@@ -14,10 +14,25 @@ class TitleAdapter : RecyclerView.Adapter<TitleViewHolder>() {
         notifyDataSetChanged()
     }
 
+    val onClickListener: (Title) -> Unit = { _ -> }
+    val onLongClickListener: (Title) -> Unit = { _ -> }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
-        Title.Type.Movie.ordinal -> TitleViewHolder.Movie.from(parent)
-        Title.Type.TVSeries.ordinal -> TitleViewHolder.TvSeries.from(parent)
+        Title.Type.Movie.ordinal -> TitleViewHolder.Movie.from(parent).also(::touchAble)
+        Title.Type.TVSeries.ordinal -> TitleViewHolder.TvSeries.from(parent).also(::touchAble)
         else -> throw IllegalArgumentException()
+    }
+
+
+    private fun touchAble(holder: TitleViewHolder): TitleViewHolder {
+        holder.itemView.setOnClickListener {
+            onClickListener(collection[holder.adapterPosition])
+        }
+        holder.itemView.setOnLongClickListener {
+            onLongClickListener(collection[holder.adapterPosition])
+            true
+        }
+        return holder
     }
 
 

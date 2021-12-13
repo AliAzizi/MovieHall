@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.kotlinbyte.domain.entity.TvSeries as TvSeriesEntity
+import com.kotlinbyte.domain.entity.Movie as MovieEntity
 import com.kotlinbyte.domain.entity.base.Title
 import com.kotlinbyte.presentation.databinding.MoviePosterBinding
 import com.kotlinbyte.presentation.databinding.TvSeriesPosterBinding
@@ -13,7 +15,7 @@ abstract class TitleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemVie
 
     class Movie(itemView: View) : TitleViewHolder(itemView) {
         override fun bind(title: Title) {
-            TODO("Not yet implemented")
+            require(title is MovieEntity)
         }
 
         companion object {
@@ -27,7 +29,8 @@ abstract class TitleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemVie
 
     class TvSeries(itemView: View) : TitleViewHolder(itemView) {
         override fun bind(title: Title) {
-            TODO("Not yet implemented")
+            require(title is TvSeriesEntity)
+
         }
 
         companion object {
