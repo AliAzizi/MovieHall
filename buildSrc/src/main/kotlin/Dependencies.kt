@@ -5,6 +5,7 @@ object Dependencies {
         val domainAndroidOverlay by lazy { ":domain-android-overlay" }
         val presentation by lazy { ":presentation" }
         val infrastructure by lazy { ":infrastructure" }
+        val widgets by lazy { ":widgets" }
     }
 
     object AndroidX {
