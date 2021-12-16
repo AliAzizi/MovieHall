@@ -32,6 +32,7 @@ abstract class Title {
     abstract val trailers: List<Video>?
     abstract val keywords: List<String>?
     abstract val similars: List<Title>
+    abstract val contentRating: String
 
     enum class Type {
         Movie,

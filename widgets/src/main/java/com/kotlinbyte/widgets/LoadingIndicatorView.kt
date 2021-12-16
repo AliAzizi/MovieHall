@@ -27,4 +27,5 @@ class LoadingIndicatorView : LottieAnimationView {
         repeatCount = 1
         playAnimation()
     }
+    
 }
